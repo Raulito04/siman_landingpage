@@ -1,0 +1,41 @@
+/* Encabezado */
+.encabezado {
+    background-color: #A83338;
+    padding: 20px 0;
+}
+
+.encabezado .contenedor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 50px;
+    border-radius: 30px;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navegacion a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+.navegacion a:hover {
+    color: #eb0000
+}
+
+/* Pie de página */
+.pie-pagina {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
