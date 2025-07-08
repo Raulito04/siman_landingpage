@@ -52,7 +52,6 @@ body {
 
 /* Seccion hero */
 .hero {
-    background: url('https://via.placeholder.com/1200x400?text=Banner+Promociones') no-repeat center center/cover;
     color: #000;
     text-align: center;
     padding: 100px 20px;
@@ -97,7 +96,7 @@ body {
     margin-bottom: 40px;
 }
 
-.galeria-promociones {
+.galeria-promociones-exclusivas {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -199,4 +198,23 @@ grid-column: span 2;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+/* pagina de promociones */
+.galeria-promociones .contenedor{
+    margin-bottom: 20px;
+}
+.galeria-promociones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    height: 400vh;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.todas-promociones .contenedor h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
 }
