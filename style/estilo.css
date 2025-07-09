@@ -1,25 +1,439 @@
-@media screen and (max-width: 768px) {
-  .encabezado .contenedor {
-    flex-direction: column;
+/* Estilos generales para mantener una base en todos los navegadores */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado */
+.encabezado {
+    background-color: #A83338;
+    padding: 15px 0;
+    position: relative;
+}
+
+.encabezado .contenedor {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-  }
+    flex-wrap: wrap;
+}
 
-  .navegacion ul {
+.logo {
+    height: clamp(40px, 8vw, 50px);
+    border-radius: 30px;
+}
+
+.navegacion {
+    display: flex;
+    align-items: center;
+}
+
+.navegacion ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navegacion a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+}
+
+.navegacion a:hover {
+    color: #eb0000;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
     flex-direction: column;
-    gap: 10px;
-  }
+    justify-content: space-between;
+    height: 30px;
+    width: 40px;
+}
 
-  .hero h1 {
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    transition: all 0.3s ease;
+}
+
+
+.hero {
+    color: #000;
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.boton-cta {
+    background-color: #A93439;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.boton-cta:hover {
+    background-color: #FE1806;
+}
+
+/* Promociones destacadas */
+.promociones-destacadas {
+    padding: 50px 0;
+    background-color: #f9f9f9;
+}
+
+.promociones-destacadas h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.galeria-promociones-exclusivas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.promocion {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.promocion img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.promocion h3 {
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(1.2rem, 4vw, 1.5rem);
+    margin: 10px 0;
+}
+
+.promocion p {
+    font-size: clamp(0.9rem, 3vw, 1rem);
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.boton-secundario {
+    background-color: #EF3742;
+    color: #fff;
+    padding: clamp(8px, 2vw, 10px) clamp(15px, 3vw, 20px);
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    border-radius: 5px;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.boton-secundario:hover {
+    background-color: #e55a00;
+}
+
+/* Suscripción */
+.suscripcion {
+    background-color: #A83338;
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.suscripcion h2 {
+    font-family: 'Roboto', sans-serif;
     font-size: 2rem;
-  }
+    margin-bottom: 20px;
+}
 
-  .hero p {
-    font-size: 1rem;
-  }
+.formulario-suscripcion {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
-  .boton-cta {
+.formulario-suscripcion input {
+    padding: 10px;
     font-size: 1rem;
-    padding: 8px 16px;
-  }
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.formulario-suscripcion button {
+    background-color: #A93439;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.formulario-suscripcion button:hover {
+    background-color: #FE1806;
+}
+
+/* Pie de página */
+.pie-pagina {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Página de promociones */
+.galeria-promociones .contenedor {
+    margin-bottom: 20px;
+}
+
+.galeria-promociones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+.todas-promociones .contenedor h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-align: center;
+}
+
+/* Contacto */
+.contacto {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contacto h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.formulario-contacto textarea {
+    height: 200px;
+}
+
+/* Mediaqueries para que sea un poco responsivo*/
+@media screen and (max-width: 1008px) {
+    .galeria-promociones-exclusivas {
+        grid-template-columns: 1fr;
+    }
+
+    .galeria-promociones {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .formulario-suscripcion input {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navegacion {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #A83338;
+        padding: 20px;
+        z-index: 1000;
+    }
+
+    .navegacion.active {
+        display: block;
+    }
+
+    .navegacion ul {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .navegacion li {
+        padding: 10px 0;
+    }
+
+    .encabezado .contenedor {
+        padding: 0 15px;
+    }
+
+    .logo {
+        height: clamp(35px, 7vw, 45px);
+    }
+
+    .galeria-promociones-exclusivas {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    .galeria-promociones {
+        grid-template-columns: 1fr;
+    }
+
+    .promocion {
+        padding: 15px;
+    }
+
+    .promocion img {
+        max-height: 200px;
+    }
+
+    .promocion h3 {
+        font-size: clamp(1rem, 3.5vw, 1.3rem);
+    }
+
+    .promocion p {
+        font-size: clamp(0.8rem, 2.5vw, 0.9rem);
+    }
+
+    .boton-secundario {
+        padding: clamp(6px, 1.5vw, 8px) clamp(12px, 2.5vw, 15px);
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        height: clamp(30px, 6vw, 40px);
+    }
+
+    .menu-toggle {
+        height: 25px;
+        width: 35px;
+    }
+
+    .menu-toggle span {
+        height: 2px;
+    }
+
+    .navegacion a {
+        font-size: clamp(0.8rem, 2vw, 0.9rem);
+    }
+
+    .promocion img {
+        max-height: 150px;
+    }
+
+    .promocion h3 {
+        font-size: clamp(0.9rem, 3vw, 1.1rem);
+    }
+
+    .promocion p {
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
+    }
+
+    .boton-secundario {
+        padding: clamp(5px, 1vw, 7px) clamp(10px, 2vw, 12px);
+        font-size: clamp(0.7rem, 1.8vw, 0.8rem);
+    }
+
+    .hero h1 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .suscripcion h2 {
+        font-size: 1.5rem;
+    }
+
+    .formulario-suscripcion input {
+        font-size: 0.9rem;
+    }
+
+    .formulario-suscripcion button {
+        font-size: 0.9rem;
+        padding: 8px 15px;
+    }
 }
